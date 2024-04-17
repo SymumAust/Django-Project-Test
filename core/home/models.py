@@ -8,5 +8,10 @@ class Student(models.Model):
     address = models.TextField(null=True, blank=True)
 
 
-class Product(models.Model):
-    pass
+class School_Student(models.Model):
+    name = models.CharField(max_length=100)
+    student_class = models.IntegerField()
+    contact = models.IntegerField()
+
+    def __str__(self):
+        return self.name
